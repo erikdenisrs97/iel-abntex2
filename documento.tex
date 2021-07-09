@@ -5,7 +5,6 @@
 % ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
 % Apresentacao
 % ------------------------------------------------------------------------
-% ------------------------------------------------------------------------
 
 \documentclass[
 	% -- opções da classe memoir --
@@ -164,7 +163,7 @@
 \setlength{\parindent}{1.3cm}
 
 % Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.1cm}  % tente também \onelineskip
+\setlength{\parskip}{0.0cm}  % tente também \onelineskip
 
 % ---
 % compila o indice
@@ -273,11 +272,14 @@ Impressa no verso da folha de rosto.
 \begin{folhadeaprovacao}
 
   \begin{center}
-    {\ABNTEXchapterfont\large\imprimirautor}
+		
+		\begin{center}
+    	\MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirautor}
+		\end{center}
 
     \vspace*{\fill}\vspace*{\fill}
     \begin{center}
-      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+      \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirtitulo}
     \end{center}
     \vspace*{\fill}
     
@@ -298,9 +300,9 @@ Impressa no verso da folha de rosto.
       
    \begin{center}
     \vspace*{0.5cm}
-    {\large\imprimirlocal}
+    \MakeUppercase{\normalfont\bfseries\imprimirlocal}
     \par
-    {\large\imprimirdata}
+    {\normalfont\bfseries\imprimirdata}
     \vspace*{1cm}
   \end{center}
   
