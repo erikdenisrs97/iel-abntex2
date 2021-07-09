@@ -34,6 +34,7 @@ O iel-abntex2 é um projeto baseado no [abnTeX2](https://github.com/abntex/abnte
  - Removido a página que indica o início dos Apêndices.
  - Removido a página que indica o início dos Anexos.
  - Resumos apenas em Português e Inglês.
+ - As fontes da folha de aprovação foram alteradas.
 # Importante
 
  - O iel-abntex2 não têm vínculo com o IEL / Faculdades da Indústria.
