@@ -171,11 +171,18 @@
 \makeindex
 % ---
 
+% ---
+%	Informações do glossário
+% ---
+\makenoidxglossaries
+\newglossaryentry{lorem}{name={lorem},description={ipsum}}
+
 % ----
 % Início do documento
 % ----
 \begin{document}
 
+\gls{lorem}
 % Seleciona o idioma do documento (conforme pacotes do babel)
 %\selectlanguage{english}
 \selectlanguage{brazil}
@@ -272,7 +279,7 @@ Impressa no verso da folha de rosto.
 \begin{folhadeaprovacao}
 
   \begin{center}
-		
+
 		\begin{center}
     	\MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirautor}
 		\end{center}
@@ -595,9 +602,7 @@ elementum}
 % Glossário
 % ----------------------------------------------------------
 %
-% Consulte o manual da classe abntex2 para orientações sobre o glossário.
-%
-%\glossary
+\printnoidxglossaries
 
 % ----------------------------------------------------------
 % Apêndices
