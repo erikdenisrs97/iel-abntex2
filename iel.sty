@@ -31,23 +31,29 @@
       \label{IEL Logo}
     \end{figure}
     \center
-    \ABNTEXchapterfont\Large FACULDADE DA INDÚSTRIA DE SÃO JOSÉ DOS PINHAIS
+
+    \ABNTEXchapterfont\normalfont\bfseries FACULDADE DA INDÚSTRIA DE SÃO JOSÉ DOS PINHAIS
     
     \vspace*{1cm}
     
-    {\ABNTEXchapterfont\large\imprimirautor}
+    \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirautor}
 
     \vfill
     \begin{center}
-    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirtitulo}
     \end{center}
     \vfill
-    
-    \large\imprimirlocal
 
-    \large\imprimirdata
-    
-    \vspace*{1cm}
+    \MakeUppercase{\normalfont\bfseries\imprimirlocal}
+
+    \normalfont\bfseries\imprimirdata
+
+    \begin{center}
+    \includegraphics[width=17.0cm]{images/iel/footeriel.png}
+    \end{center}
+
+    \vspace*{0.0cm}
+  
   \end{capa}
 }
 
@@ -63,16 +69,13 @@
   \label{IEL Logo}
 \end{figure}
 \begin{center}
-{\ABNTEXchapterfont\Large FACULDADE DA INDÚSTRIA DE SÃO JOSÉ DOS PINHAIS}
     
-    \vspace*{1cm}
-    
-{\ABNTEXchapterfont\large\imprimirautor}
+\ABNTEXchapterfont\normalfont\imprimirautor
 
 \vspace*{\fill}\vspace*{\fill}
 
 \begin{center}
-\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+  \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirtitulo}
 \end{center}
 
 \vspace*{\fill}
@@ -86,22 +89,23 @@
   \vspace*{\fill}
 }%
 
-{\large\imprimirorientadorRotulo~\imprimirorientador\par}
+{\normalfont\imprimirorientadorRotulo~\imprimirorientador\par}
 
 \abntex@ifnotempty{\imprimircoorientador}{%
-  {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+  {\normalfont\imprimircoorientadorRotulo~\imprimircoorientador}%
 }%
 
 \vspace*{\fill}
 
-{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
-
-{\large\imprimirlocal}
+\MakeUppercase{\normalfont\bfseries\imprimirlocal}
 
 \par
 
-{\large\imprimirdata}
-\vspace*{1cm}
+{\normalfont\bfseries\imprimirdata}
+
+\includegraphics[width=17.0cm]{images/iel/footeriel.png}
+
+\vspace*{0.0cm}
 \end{center}
 }
 
