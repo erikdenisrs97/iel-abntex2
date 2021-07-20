@@ -1,0 +1,199 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Faculdades da Indústria
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is Erik Rodrigues, erikdenisrs97@gmail.com
+%%
+%% Further information about abnTeX2 are available on https://github.com/abntex/abntex2
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA A FACULDADE DA INDÚSTRIA
+% ---
+
+\ProvidesPackage{IEL}[2021/07/07 Criacao desta customização do abnTeX2]
+
+% Fontes em Helvetica - Arial
+% -----------------------------------------
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% -----------------------------------------
+
+% Inclusão de cores em tabelas
+% -----------------------------------------
+\usepackage[table,xcdraw]{xcolor}
+% -----------------------------------------
+
+% Possibilita a formatação de capítulos, etc
+% -----------------------------------------
+\usepackage{titlesec}
+% -----------------------------------------
+
+% Espaçamento entre linhas e parágrafos
+% -----------------------------------------
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.0cm}
+% -----------------------------------------
+
+% CAPA
+% -----------------------------------------
+\renewcommand{\imprimircapa}{%
+
+  \begin{capa}%
+
+    \begin{figure}[t!]
+      \hspace{11.09cm}
+      \includegraphics[scale=0.5]{images/iel/logoiel.png}
+      \label{IEL Logo}
+    \end{figure}
+
+    \center
+
+    \ABNTEXchapterfont\normalfont\bfseries FACULDADE DA INDÚSTRIA DE SÃO JOSÉ DOS PINHAIS
+
+    \vspace*{1cm}
+    
+    \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirautor}
+
+    \vfill
+    \begin{center}
+    \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirtitulo}
+    \end{center}
+    \vfill
+
+    \MakeUppercase{\normalfont\bfseries\imprimirlocal}
+
+    \MakeUppercase{\normalfont\bfseries\imprimirdata}
+
+    \begin{center}
+      \begin{figure}[b!]
+          \includegraphics[width=160mm]{images/iel/footeriel.png}
+          \label{IEL Logo}
+      \end{figure}
+    \end{center}
+
+    \vspace*{0.0cm}
+  
+  \end{capa}
+}
+% -----------------------------------------
+
+% FOLHA DE ROSTO 
+% -----------------------------------------
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+
+  \begin{figure}[t!]
+    \hspace{11.09cm}
+    \includegraphics[scale=0.5]{images/iel/logoiel.png}
+    \label{IEL Logo}
+  \end{figure}
+
+  \begin{center}
+    
+  \begin{center}
+    \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirautor}
+  \end{center}
+
+  \vspace*{\fill}\vspace*{\fill}
+
+  \begin{center}
+    \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirtitulo}
+  \end{center}
+
+  \vspace*{\fill}
+
+  \abntex@ifnotempty{\imprimirpreambulo}{%
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+    \SingleSpacing
+    \imprimirpreambulo\
+    \end{minipage}%
+    \vspace*{\fill}
+  }%
+
+  {\normalfont\imprimirorientadorRotulo~\imprimirorientador\par}
+
+  \abntex@ifnotempty{\imprimircoorientador}{%
+    {\normalfont\imprimircoorientadorRotulo~\imprimircoorientador}%
+  }%
+
+  \vspace*{\fill}
+
+  \MakeUppercase{\normalfont\bfseries\imprimirlocal}
+
+  \MakeUppercase{\normalfont\bfseries\imprimirdata}
+
+  \begin{center}
+    \begin{figure}[b!]
+        \includegraphics[width=160mm]{images/iel/footeriel.png}
+        \label{IEL Logo}
+    \end{figure}
+  \end{center}
+
+  \vspace*{0.0cm}
+\end{center}
+}
+
+\makeatother
+
+% -----------------------------------------
+
+% Fontes
+% -----------------------------------------
+\renewcommand{\ABNTEXchapterfont}{\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXpartfont}{\ABNTEXchapterfont}
+\renewcommand{\ABNTEXpartfontsize}{\ABNTEXchapterfontsize}
+
+\renewcommand{\ABNTEXsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsectionfont}{\ABNTEXsectionfont}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsubsectionfont}{\ABNTEXsubsectionfont}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\ABNTEXsubsectionfont}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+% -----------------------------------------
+
+% SUMÁRIO
+% -----------------------------------------
+\setlength{\cftbeforeparagraphskip}{0pt} 
+\setlength{\cftbeforesubsectionskip}{0pt} 
+\setlength{\cftbeforesectionskip}{0pt} 
+\setlength{\cftbeforesubsubsectionskip}{0pt} 
+\setlength{\cftbeforechapterskip}{\onelineskip}
+
+\makeatletter 
+\settocpreprocessor{chapter}{% 
+  \let\tempf@rtoc\f@rtoc% 
+  \def\f@rtoc{% 
+  \texorpdfstring{\bfseries\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}% 
+}
+\settocpreprocessor{section}{% 
+  \let\tempf@rtoc\f@rtoc% 
+  \def\f@rtoc{% 
+  \texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}% 
+} 
+\makeatother
+% -----------------------------------------
+
+% ---
+% FIM DAS CUSTOMIZACOES PARA A FACULDADE DA INDÚSTRIA
+% ---

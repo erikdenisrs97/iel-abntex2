@@ -4,6 +4,23 @@
 % mestrado e trabalhos monograficos em geral) em conformidade com 
 % ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
 % Apresentacao
+%
+% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Faculdades da Indústria
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is Erik Rodrigues, erikdenisrs97@gmail.com
+%
+% Further information about abnTeX2 are available on https://github.com/abntex/abntex2
+%
 % ------------------------------------------------------------------------
 
 \documentclass[
@@ -22,61 +39,7 @@
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
-% ---
-% Pacotes básicos 
-% ---
-\usepackage{helvet}			% Usa a fonte Helvetica (Arial no Windows)			
-\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
-\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
-\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
-\usepackage{color}				% Controle das cores
-\usepackage{graphicx}			% Inclusão de gráficos
-\usepackage{titlesec} % Possibilita a formatação de capítulos, etc
-\usepackage{microtype} 			% para melhorias de justificação
-\usepackage{iel} % Inclusão do modelo IEL
-\usepackage[table,xcdraw]{xcolor} 			% Inclusão de cores em table
-% ---
-		
-% ---
-% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
-% ---
-\usepackage{lipsum}				% para geração de dummy text
-% ---
-
-% ---
-% Pacotes glossaries
-% ---
-\usepackage[subentrycounter,seeautonumberlist,nonumberlist=true]{glossaries}
-
-% ---
-% Pacotes de citações
-% ---
-\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
-% ---
-
-
-
-% --- 
-% CONFIGURAÇÕES DE PACOTES
-% --- 
-
-% ---
-% Configurações do pacote backref
-% Usado sem a opção hyperpageref de backref
-\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
-% Texto padrão antes do número das pápginas
-\renewcommand{\backref}{}
-% Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
-	\ifcase #1 %
-		Nenhuma citação no texto.%
-	\or
-		Citado na página #2.%
-	\else
-		Citado #1 vezes nas páginas #2.%
-	\fi}%
-% ---
+\input{pacotes}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
@@ -155,16 +118,6 @@
 \setfloatlocations{quadro}{hbtp} % Ver https://github.com/abntex/abntex2/issues/176
 % ---
 
-% --- 
-% Espaçamentos entre linhas e parágrafos 
-% --- 
-
-% O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
-
-% Controle do espaçamento entre um parágrafo e outro:
-\setlength{\parskip}{0.0cm}  % tente também \onelineskip
-
 % ---
 % compila o indice
 % ---
@@ -172,7 +125,7 @@
 % ---
 
 % ---
-%	Informações do glossário
+%	Itens do Glossário
 % ---
 \makenoidxglossaries
 \newglossaryentry{lorem}{name={lorem},description={ipsum}}
@@ -182,7 +135,6 @@
 % ----
 \begin{document}
 
-\gls{lorem}
 % Seleciona o idioma do documento (conforme pacotes do babel)
 %\selectlanguage{english}
 \selectlanguage{brazil}
@@ -501,7 +453,7 @@ Este documento deve ser utilizado como complemento dos manuais do \abnTeX\
 
 Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
 você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica.
+na contribuição científica. \gls{lorem}.
 
 Equipe \abnTeX 
 
