@@ -416,11 +416,7 @@ Esta citação é elaborada conforme a ABNT NBR 10520.
 % ----------------------------------------------------------
 \textual
 
-% ----------------------------------------------------------
-% Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
-% ----------------------------------------------------------
 \chapter{Introdução}
-% ----------------------------------------------------------
 
 Este documento e seu código-fonte são exemplos de referência de uso da classe
 \textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
@@ -460,7 +456,7 @@ Equipe \abnTeX
 
 Lauro César Araujo
 
-\chapter{Conteúdos específicos do modelo de trabalho acadêmico}\label{cap_trabalho_academico}
+\chapter{modelo de trabalho acadêmico}
 
 \section{Quadros}
 
@@ -485,45 +481,59 @@ obrigatório da ABNT.
 Primeira opção, utilizando \texttt{autoref}: Ver o \autoref{quadro_exemplo}. 
 Segunda opção, utilizando  \texttt{ref}: Ver o Quadro \ref{quadro_exemplo}.
 
-% ---
-% Capitulo de revisão de literatura
-% ---
-\chapter{Lorem ipsum dolor sit amet}
-% ---
+\section{Figuras}
 
-% ---
+Exemplo de inserção de figura:
+
+\begin{figure}[!htb]
+	\centering
+	\caption{Logo Faculdades da Indústria}
+	\includegraphics[scale = 0.5]{images/Faculdade-da-Indústria-IEL-25.png}
+	\fonte{\citeonline{abntex2-wiki-como-customizar}}
+\end{figure}
+
+\chapter{Tabelas}
+
+\section{Tabelas}
+
+Exemplo de inserção de tabela:
+
+\begin{table}[!htb]
+	\centering
+	\caption{Alguns Estados e Capitais do Brasil}
+	\begin{tabular}{ll}
+	\rowcolor[HTML]{CBCEFB}
+	\multicolumn{1}{c}{\cellcolor[HTML]{CBCEFB}Estado} & Cidade         \\
+	Paraná                                             & Curitiba       \\
+	Fortaleza                                          & Ceará          \\
+	Minas Gerais                                       & Belo Horizonte
+	\end{tabular}
+	\fonte{Autor.}
+\end{table}
+
+\chapter{Lorem ipsum dolor sit amet}
+
 \section{Aliquam vestibulum fringilla lorem}
-% ---
+\subsection{Aliquam vestibulum fringilla lorem}
+\subsubsection{Aliquam vestibulum fringilla lorem}
 
 \lipsum[1]
 
 \lipsum[2-3]
 
-% ---
-% primeiro capitulo de Resultados
-% ---
 \chapter{Lectus lobortis condimentum}
-% ---
 
-% ---
-\section{Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae}
-% ---
+\section{Vestibulum}
 
 \lipsum[21-22]
 
-% ---
-% segundo capitulo de Resultados
-% ---
-\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum
-elementum}
-% ---
+\chapter{Nam sed tellus sit}
 
-% ---
-\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
-% ---
+\section{Pellentesque sit amet}
 
 \lipsum[24]
+
+\index{Exemplo de Índice}
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -532,11 +542,7 @@ elementum}
 % ----------------------------------------------------------
 \phantompart
 
-% ---
-% Conclusão
-% ---
 \chapter{Conclusão}
-% ---
 
 \lipsum[31-33]
 
@@ -550,7 +556,7 @@ elementum}
 % Referências bibliográficas
 % ----------------------------------------------------------
 \renewcommand{\bibname}{REFER\^ENCIAS}
-\bibliography{abntex2-modelo-references}
+\bibliography{referencias}
 
 % ----------------------------------------------------------
 % Glossário
@@ -613,7 +619,6 @@ parturient montes nascetur ridiculus mus}
 \end{anexosenv}
 
 % 
-\index{Elemento opcional.}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
