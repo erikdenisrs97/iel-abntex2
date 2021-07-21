@@ -53,9 +53,13 @@ Minas Gerais                                       & Belo Horizonte
 
 ## Referenciando
 
+As referências ficam contidas no arquivo **referencias.bib**. Nele há vários exemplos de como as referências podem ser inseridas.
+
+Para inserir a referência no documento:
+
 ```latex
-\citeonline{minha-referencia-no-referencias.bib}
-\cite{minha-referencia-no-referencias.bib}
+\citeonline{abntex2-wiki-como-customizar}
+\cite{ibge1993}
 ```
 
 ## Inserindo Quadros
