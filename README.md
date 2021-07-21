@@ -49,6 +49,8 @@ Minas Gerais                                       & Belo Horizonte
 \end{table}
 ```
 
+> Acesse o site [Table Generator](https://www.tablesgenerator.com/) para gerar tabelas com mais facilidade.
+
 ## Referenciando
 
 ```latex
@@ -56,7 +58,6 @@ Minas Gerais                                       & Belo Horizonte
 \cite{minha-referencia-no-referencias.bib}
 ```
 
-> Acesse o site [Table Generator](https://www.tablesgenerator.com/) para gerar tabelas com mais facilidade.
 ## Inserindo Quadros
 
 ```latex
