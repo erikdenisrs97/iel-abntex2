@@ -22,20 +22,9 @@
 
 \ProvidesPackage{IEL}[2021/07/07 Criacao desta customização do abnTeX2]
 
-% Fontes em Helvetica - Arial
-% -----------------------------------------
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
-% -----------------------------------------
-
 % Inclusão de cores em tabelas
 % -----------------------------------------
 \usepackage[table,xcdraw]{xcolor}
-% -----------------------------------------
-
-% Possibilita a formatação de capítulos, etc
-% -----------------------------------------
-\usepackage{titlesec}
 % -----------------------------------------
 
 % Espaçamento entre linhas e parágrafos
@@ -170,27 +159,50 @@
 
 \renewcommand{\ABNTEXsubsubsubsectionfont}{\ABNTEXsubsectionfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+
+\renewcommand{\familydefault}{\sfdefault}
+
 % -----------------------------------------
 
 % SUMÁRIO
 % -----------------------------------------
+% Modifica o espaçamento no sumário 
+% Nao ha espacos, exceto para as entradas de capitulos 
 \setlength{\cftbeforeparagraphskip}{0pt} 
 \setlength{\cftbeforesubsectionskip}{0pt} 
 \setlength{\cftbeforesectionskip}{0pt} 
 \setlength{\cftbeforesubsubsectionskip}{0pt} 
 \setlength{\cftbeforechapterskip}{\onelineskip}
 
+% Alteração da indentação dos itens do sumário
+\cftsetindents{chapter}{0pt}{42pt}
+\cftsetindents{section}{0pt}{42pt}
+\cftsetindents{subsection}{0pt}{42pt}
+\cftsetindents{subsubsection}{0pt}{42pt}
+
+% Chapter tamanho 12, negrito e caixa alta
 \makeatletter 
 \settocpreprocessor{chapter}{% 
   \let\tempf@rtoc\f@rtoc% 
   \def\f@rtoc{% 
   \texorpdfstring{\bfseries\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}% 
 }
-\settocpreprocessor{section}{% 
-  \let\tempf@rtoc\f@rtoc% 
-  \def\f@rtoc{% 
-  \texorpdfstring{\MakeTextUppercase{\tempf@rtoc}}{\tempf@rtoc}}% 
-} 
+
+% Section tamanho 12, caixa alta
+\makeatletter
+\let\oldcontentsline\contentsline
+\def\contentsline#1#2{%
+  \expandafter\ifx\csname l@#1\endcsname\l@section
+    \expandafter\@firstoftwo
+  \else
+    \expandafter\@secondoftwo
+  \fi
+  {%
+    \oldcontentsline{#1}{\MakeTextUppercase{#2}}%
+  }{%
+    \oldcontentsline{#1}{#2}%
+  }%
+}
 \makeatother
 % -----------------------------------------
 
