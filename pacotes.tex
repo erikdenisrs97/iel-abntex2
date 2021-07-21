@@ -27,7 +27,13 @@
 % Pacotes de citações
 % ---
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage[alf, versalete,
+abnt-emphasize = bf, % destaca o titulo em negrito;
+abnt-etal-list = 3, % trabalhos com mais de 3 autores recebem et al.,;
+abnt-etal-text = it, % escreve o et al., em italico;
+abnt-and-type = &, % usa o carater '&' no lugar de 'e' para mais de um autor;
+abnt-last-names = abnt] % trata sobrenomes 'estritamente' conforme a ABNT; e
+{abntex2cite}	% Citações padrão ABNT
 % ---
 
 % Inclusão de cores em tabelas
