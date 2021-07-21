@@ -1,13 +1,13 @@
 # O que é o iel-abntex2?
 
 O iel-abntex2 é um projeto baseado no [abnTeX2](https://github.com/abntex/abntex2) desenvolvido para auxiliar os alunos da IEL em seus trabalhos acadêmicos. O projeto pode ser utilizado por todos os alunos da instituição.
-É importante que o aluno saiba um pouco sobre LaTeX pois aqui não encontrará informações específicas sobre o LaTeX e abnTeX2 e seu funcionamento. Caso não saiba, consulte [Iniciando em LaTeX](https://github.com/abntex/abntex2/wiki/PorOndeComecar) ou veja alguns vídeos na plataforma do Youtube.
+É importante que o aluno saiba um pouco sobre LaTeX pois aqui ele não encontrará informações específicas sobre o funcionado do LaTeX e/ou abnTeX2. Caso não saiba, consulte [Iniciando em LaTeX](https://github.com/abntex/abntex2/wiki/PorOndeComecar) ou veja alguns vídeos na plataforma do Youtube.
 
 > Segundo a [The LaTeX Project Public License](http://www.latex-project.org/lppl.txt) você é livre para conhecer, estudar, alterar e redistribuir o trabalho do abnTeX2.
 
 # Como utilizar?
 
- 1. Você deve fazer o Download do projeto clicando [aqui](https://github.com/erikdenisrs97/iel-abntex2/archive/refs/heads/main.zip) ou através do `git clone`;
+ 1. O aluno deve fazer o Download do projeto clicando [aqui](https://github.com/erikdenisrs97/iel-abntex2/archive/refs/heads/main.zip) ou utilizar o `git clone`;
  2. É necessário definir um editor e compilador para o documento. Recomendo o uso do [Overleaf](pt.overleaf.com) porque ele funciona diretamente no browser e assim você não precisa instalar nada no seu computador;
  3. Basta fazer o upload projeto no seu editor preferido, abrir o **documento.tex** e redigir seu trabalho acadêmico. O documento possuí comentários que são auto-explicativos;
  
