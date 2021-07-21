@@ -85,8 +85,12 @@ Minas Gerais                                       & Belo Horizonte
  - Removido a página que indica o início dos Anexos;
  - Resumos apenas em Português e Inglês;
  - O sumário foi alterado para o formato tradicional e modificações foram realizadas.
+ - Títulos dos trabalhos nas referências em negrito;
+ - Contador de quantas vezes o autor foi citado no documento e respectivas páginas;
 
-# Melhoras Futuras
+# Melhorias Futuras
+
+- Formatação da subsubsubseção no Sumário;
 
 # Importante
 
@@ -94,4 +98,3 @@ Minas Gerais                                       & Belo Horizonte
    Não possuí nenhuma garantia e pode ser distribuido e alterado livremente para fins acadêmicos;
  - É possível que o iel-abntex2 sofra alterações ao longo do tempo,
    corrigindo possíveis falhas, implementando novas funções ou alterações no estilo.
-
