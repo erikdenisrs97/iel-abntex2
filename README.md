@@ -88,10 +88,6 @@ Minas Gerais                                       & Belo Horizonte
  - Títulos dos trabalhos nas referências em negrito;
  - Contador de quantas vezes o autor foi citado no documento e respectivas páginas;
 
-# Melhorias Futuras
-
-- Formatação da subsubsubseção no Sumário;
-
 # Importante
 
  - O iel-abntex2 não têm vínculo com o IEL / Faculdades da Indústria.
