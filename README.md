@@ -79,6 +79,18 @@ Para inserir a referência no documento:
 \end{quadro}
 ```
 
+## Inserindo Itens no Glossário
+
+```latex
+\newglossaryentry{lorem}{name={ABNTEX2:},description={O abnTeX2, evolução do abnTeX (ABsurd Norms for TeX)}}
+```
+
+## Inserindo Itens no Índice
+
+```latex
+\index{Conteúdo do Índice}
+```
+
 # Customizações Realizadas
 
  - Alteração da capa e folha de rosto;
