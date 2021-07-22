@@ -13,6 +13,8 @@ O iel-abntex2 é um projeto baseado no [abnTeX2](https://github.com/abntex/abnte
  
 > Você é iniciante? [Essa página](http://www.abntex.net.br/) é desenvolvida pela equipe do abnTeX e contém muitas informações importantes.
 
+> Na pasta manuais há um documento específico para o abnTeX2.
+
 # Dicas
 
 ## Inserindo Figuras
