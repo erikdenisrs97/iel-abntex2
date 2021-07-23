@@ -435,7 +435,7 @@ Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
 estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
 modificados tenham seus nomes alterados e que os créditos sejam dados aos
 autores originais, nos termos da ``The \LaTeX\ Project Public
-License''\footnote{\url{http://www.latex-project.org/lppl.txt}}.
+License.
 
 Encorajamos que sejam realizadas customizações específicas deste exemplo para
 universidades e outras instituições --- como capas, folha de aprovação, etc.
@@ -462,7 +462,7 @@ Lauro César Araujo
 \section{Quadros}
 
 Este modelo vem com o ambiente \texttt{quadro} e impressão de Lista de quadros 
-configurados por padrão. Verifique um exemplo de utilização:
+configurados por padrão. Verifique o \autoref{quadro_exemplo}.
 
 \begin{quadro}[htb]
 \caption{\label{quadro_exemplo}Exemplo de quadro}
@@ -484,11 +484,11 @@ Segunda opção, utilizando  \texttt{ref}: Ver o Quadro \ref{quadro_exemplo}.
 
 \section{Figuras}
 
-Exemplo de inserção de figura:
+Veja a \autoref{logo_iel}.
 
 \begin{figure}[!htb]
 	\centering
-	\caption{Logo Faculdades da Indústria}
+	\caption{\label{logo_iel}Logo Faculdades da Indústria}
 	\includegraphics[scale = 0.5]{images/Faculdade-da-Indústria-IEL-25.png}
 	\fonte{\citeonline{abntex2-wiki-como-customizar}}
 \end{figure}
@@ -512,29 +512,25 @@ Exemplo de inserção de tabela:
 	\fonte{Autor.}
 \end{table}
 
-\chapter{Lorem ipsum dolor sit amet}
+\chapter{Seções}
 
-\section{Aliquam vestibulum fringilla lorem}
-\subsection{Aliquam vestibulum fringilla lorem}
-\subsubsection{Aliquam vestibulum fringilla lorem}
+\section{Exemplo de Seção}
 
-\lipsum[1]
+Conteúdo da Seção.
 
-\lipsum[2-3]
+\subsection{Exemplo de subseção}
+
+Conteúdo da subseção.
+
+\subsubsection{Exemplo de subsubseção}
+
+Conteúdo da subsubseção.
 
 \chapter{Lectus lobortis condimentum}
 
 \section{Vestibulum}
 
 \lipsum[21-22]
-
-\chapter{Nam sed tellus sit}
-
-\section{Pellentesque sit amet}
-
-\lipsum[24]
-
-\index{Exemplo de Índice}
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -625,6 +621,7 @@ parturient montes nascetur ridiculus mus}
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
 \phantompart
+\index{Exemplo de Índice}
 \renewcommand\indexname{ÍNDICE}
 \printindex
 %---------------------------------------------------------------------
