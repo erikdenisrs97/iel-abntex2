@@ -1,5 +1,5 @@
 %%
-%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Faculdades da Indústria
+%% Customizações do abnTeX2 (http://abnTeX2.gooecode.com) para a Faculdades da Indústria
 %%
 %% This work may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
@@ -22,6 +22,7 @@
 
 \ProvidesPackage{IEL}[2021/07/07 Criacao desta customização do abnTeX2]
 \usepackage{tocloft}
+\usepackage{fancyhdr}
 
 % Espaçamento entre linhas e parágrafos
 % -----------------------------------------
@@ -109,12 +110,6 @@
     \vspace*{\fill}
   }%
 
-  {\normalfont\imprimirorientadorRotulo~\imprimirorientador\par}
-
-  \abntex@ifnotempty{\imprimircoorientador}{%
-    {\normalfont\imprimircoorientadorRotulo~\imprimircoorientador}%
-  }%
-
   \vspace*{\fill}
 
   \MakeUppercase{\normalfont\bfseries\imprimirlocal}
@@ -127,8 +122,7 @@
         \label{IEL Footer2}
     \end{figure}
   \end{center}
-
-  \vspace*{0.0cm}
+  
 \end{center}
 }
 
@@ -175,6 +169,19 @@
 \cftsetindents{section}{0pt}{20pt}
 \cftsetindents{subsection}{0pt}{30pt}
 \cftsetindents{subsubsection}{0pt}{40pt}
+
+% Fonte do Apêndices
+\renewcommand\apendicesname{\normalfont\normalsize\bfseries{APÊNDICES}}
+
+% Fonte do Anexos
+\renewcommand\anexosname{\normalfont\normalsize\bfseries{ANEXOS}}
+
+% Adicionando hífen no anexo e apêndice do TOC.
+\renewcommand{\tocinnonumchapter}{%
+\addtocontents{toc}{\cftsetindents{chapter}{0pt}{25pt}}%
+\cftinserthook{toc}{A}}
+%
+\cftinsertcode{A}{\renewcommand{\cftchapteraftersnum}{\hspace{1pt} \textendash \hspace{1pt}}}
 
 % Chapter tamanho 12, negrito e caixa alta
 \makeatletter 

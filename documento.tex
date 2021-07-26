@@ -35,7 +35,7 @@
 	section=TITLE,  % títulos de capítulos convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
-	sumario=tradicional, % Sumário Tradicional (Sem a norma ABNT)
+	sumario=tradicional, % Sumário Tradicional
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
 	brazil				% o último idioma é o principal do documento
@@ -125,12 +125,6 @@
 % ---
 \makeindex
 % ---
-
-% ---
-%	Itens do Glossário
-% ---
-\makenoidxglossaries
-\newglossaryentry{lorem}{name={ABNTEX2:},description={O abnTeX2, evolução do abnTeX (ABsurd Norms for TeX)}}
 
 % ----
 % Início do documento
@@ -451,8 +445,7 @@ Este documento deve ser utilizado como complemento dos manuais do \abnTeX\
 
 Esperamos, sinceramente, que o \abnTeX\ aprimore a qualidade do trabalho que
 você produzirá, de modo que o principal esforço seja concentrado no principal:
-na contribuição científica. \gls{lorem}.
-
+na contribuição científica.
 Equipe \abnTeX 
 
 Lauro César Araujo
@@ -537,7 +530,7 @@ Conteúdo da subsubseção.
 % para que se inicie o bookmark na raiz
 % e adiciona espaço de parte no Sumário
 % ----------------------------------------------------------
-\phantompart
+%\phantompart
 
 \chapter{Conclusão}
 
@@ -558,8 +551,6 @@ Conteúdo da subsubseção.
 % ----------------------------------------------------------
 % Glossário
 % ----------------------------------------------------------
-%
-\printnoidxglossaries
 
 % ----------------------------------------------------------
 % Apêndices
@@ -569,16 +560,16 @@ Conteúdo da subsubseção.
 % Inicia os apêndices
 % ---
 \begin{apendicesenv}
+\partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+\chapter{Contrato}
 % ----------------------------------------------------------
 
 \lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+\chapter{Imagem}
 % ----------------------------------------------------------
 \lipsum[55-57]
 
@@ -595,14 +586,15 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ---
 \begin{anexosenv}
 
+\partanexos
+
 % ---
-\chapter{Morbi ultrices rutrum lorem.}
+\chapter{Contrato}
 % ---
 \lipsum[30]
 
 % ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
+\chapter{Imagem}
 % ---
 
 \lipsum[31]
