@@ -1,7 +1,7 @@
 # O que é o iel-abntex2?
 
-O iel-abntex2 é um projeto baseado no [abnTeX2](https://github.com/abntex/abntex2) desenvolvido para auxiliar os alunos da IEL em seus trabalhos acadêmicos. O projeto pode ser utilizado por todos os alunos da instituição.
-É importante que o aluno saiba um pouco sobre LaTeX pois aqui ele não encontrará informações específicas sobre o funcionamento do LaTeX e/ou abnTeX2. Caso não saiba, consulte [Iniciando em LaTeX](https://github.com/abntex/abntex2/wiki/PorOndeComecar) ou veja alguns vídeos na plataforma do Youtube.
+O iel-abntex2 é um projeto baseado no [abnTeX2](https://github.com/abntex/abntex2) e que foi desenvolvido com o intuito de auxiliar os alunos da IEL em seus trabalhos acadêmicos.
+É importante que o aluno saiba pelo menos um pouco sobre LaTeX pois aqui ele não encontrará informações específicas sobre o funcionamento do LaTeX e/ou abnTeX2. Caso não saiba, consulte [Iniciando em LaTeX](https://github.com/abntex/abntex2/wiki/PorOndeComecar) e também veja alguns no Youtube.
 
 > Segundo a [The LaTeX Project Public License](http://www.latex-project.org/lppl.txt) você é livre para conhecer, estudar, alterar e redistribuir o trabalho do abnTeX2.
 
