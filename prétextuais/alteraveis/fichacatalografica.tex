@@ -1,0 +1,38 @@
+A FICHA CATALOGRÁFICA só pode ser confeccionada por um bibliotecário.
+Para confecção, enviar por e-mail (bibliotecasjp@sistemafiep.org.br),
+as seguintes informações: Nome completo do(a) autor(a) do trabalho sem abreviações,
+nome completo do(a) orientador(a) do trabalho sem abreviações,
+resumo em português com as palavras-chave, título e subtítulo,
+quantidade prevista de páginas e a informação se há ilustrações.
+Impressa no verso da folha de rosto.
+
+\begin{fichacatalografica}
+	\sffamily
+	\vspace*{\fill}					% Posição vertical
+	\begin{center}					% Minipage Centralizado
+	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
+	\small
+	
+	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
+	\imprimirlocal, \imprimirdata-
+	
+	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
+	
+	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
+	
+	\hspace{0.5cm}
+	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
+	\imprimirdata.}\\
+	
+	\hspace{0.5cm}
+		1. Palavra-chave1.
+		2. Palavra-chave2.
+		2. Palavra-chave3.
+		I. Orientador.
+		II. Universidade xxx.
+		III. Faculdade de xxx.
+		IV. Título 			
+	\end{minipage}}
+	\end{center}
+\end{fichacatalografica}
+% ---

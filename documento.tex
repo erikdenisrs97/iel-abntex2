@@ -5,126 +5,26 @@
 % ABNT NBR 14724:2011: Informacao e documentacao - Trabalhos academicos -
 % Apresentacao
 %
-% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para a Faculdades da Indústria
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3 or later is part of all distributions of LaTeX
-% version 2005/12/01 or later.
-%
-% This work has the LPPL maintenance status `maintained'.
+% O iel-abntex2 é um projeto baseado no [abnTeX2](https://github.com/abntex/abntex2)
+% desenvolvido para auxiliar os alunos da IEL em seus trabalhos acadêmicos. 
+% O projeto pode ser utilizado por todos os alunos e por todos os cursos.
+% É importante que o aluno saiba um pouco sobre LaTeX pois aqui não encontrará informações
+% específicas sobre o LaTeX e seu funcionamento. Caso não saiba, consulte [Iniciando em LaTeX]
+% (https://github.com/abntex/abntex2/wiki/PorOndeComecar) ou veja alguns vídeos na plataforma do Youtube.
 % 
-% The Current Maintainer of this work is Erik Rodrigues, erikdenisrs97@gmail.com
-% Version: 1.0
+% Segundo a [The LaTeX Project Public License](http://www.latex-project.org/lppl.txt)
+% você é livre para conhecer, estudar, alterar e redistribuir o trabalho do abnTeX2.
 %
-% Further information about abnTeX2 are available on https://github.com/abntex/abntex2
-%
+% O atual mantenedor do projeto é Erik Rodrigues, erikdenisrs97@gmail.com
+% Versão: 1.0
+% ------------------------------------------------------------------------
 % ------------------------------------------------------------------------
 
-\documentclass[
-	% -- opções da classe memoir --
-	12pt,				% tamanho da fonte
-	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	oneside,			% para impressão em recto e verso. Oposto a oneside
-	a4paper,			% tamanho do papel. 
-	% -- opções da classe abntex2 --
-	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	section=TITLE,  % títulos de capítulos convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
-	sumario=tradicional, % Sumário Tradicional
-	% -- opções do pacote babel --
-	english,			% idioma adicional para hifenização
-	brazil				% o último idioma é o principal do documento
-	]{abntex2}
-
+\include{prétextuais/inalteraveis/documentclass.tex}
 \input{pacotes}
-
-% ---
-% Informações de dados para CAPA e FOLHA DE ROSTO
-% ---
-\titulo{Projeto Integrador:\\ Modelo IEL com \abnTeX}
-\autor{Erik Rodrigues\\Aluno2\\Aluno3\\Aluno4}
-\local{São José dos Pinhais}
-\data{2021}
-\orientador{Fabio Bettio}
-\coorientador{Paulo Henrique}
-\instituicao{%
-  Faculdades da Indústria -- IEL
-  \par
-  Sistemas de Informação} % Nome do curso
-\tipotrabalho{Monografia (graduação)}
-% O preambulo deve conter o tipo do trabalho, o objetivo, 
-% o nome da instituição e a área de concentração 
-\preambulo{Trabalho de Conclusão da Disciplina (inserir o nome da disciplina)
- do período (inserir o período) apresentado à Faculdade da 
- Indústria de São José dos Pinhais, como requisito parcial 
- para obtenção do Título de (escolher o título entre Bacharel, 
- Licenciatura ou Tecnólogo) do Curso de (inserir o nome do curso).}
-% ---
-
-
-% ---
-% Configurações de aparência do PDF final
-
-% alterando o aspecto da cor azul
-\definecolor{blue}{RGB}{41,5,195}
-
-% informações do PDF
-\makeatletter
-\hypersetup{
-     	%pagebackref=true,
-		pdftitle={\@title}, 
-		pdfauthor={\@author},
-    	pdfsubject={\imprimirpreambulo},
-	    pdfcreator={LaTeX with abnTeX2},
-		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
-		colorlinks=true,       		% false: boxed links; true: colored links
-    	linkcolor=black,          	% color of internal links
-    	citecolor=black,        		% color of links to bibliography
-    	filecolor=black,      		% color of file links
-		urlcolor=black,
-		bookmarksdepth=4
-}
-\makeatother
-% --- 
-
-% ---
-% Posiciona figuras e tabelas no topo da página quando adicionadas sozinhas
-% em um página em branco. Ver https://github.com/abntex/abntex2/issues/170
-\makeatletter
-\setlength{\@fptop}{5pt} % Set distance from top of page to first float
-\makeatother
-% ---
-
-% ---
-% Possibilita criação de Quadros e Lista de quadros.
-% Ver https://github.com/abntex/abntex2/issues/176
-%
-\newcommand{\quadroname}{Quadro}
-\newcommand{\listofquadrosname}{Lista de quadros}
-
-\newfloat[chapter]{quadro}{loq}{\quadroname}
-\newlistof{listofquadros}{loq}{\listofquadrosname}
-\newlistentry{quadro}{loq}{0}
-
-% configurações para atender às regras da ABNT
-\setfloatadjustment{quadro}{\centering}
-\counterwithout{quadro}{chapter}
-\renewcommand{\cftquadroname}{\quadroname\space} 
-\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
-
-\setfloatlocations{quadro}{hbtp} % Ver https://github.com/abntex/abntex2/issues/176
-% ---
-
-% ---
-% compila o indice
-% ---
-\makeindex
-% ---
+\include{prétextuais/alteraveis/capa.tex}
+\include{prétextuais/inalteraveis/pdf.tex}
+\include{misc.tex}
 
 % ----
 % Início do documento
@@ -141,269 +41,23 @@
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
-% \pretextual
 
-% ---
-% Capa
-% ---
 \imprimircapa
-% ---
 
-% ---
-% Folha de rosto
-% (o * indica que haverá a ficha bibliográfica)
-% ---
 \imprimirfolhaderosto*
-% ---
 
-% ---
-% Inserir a ficha bibliografica
-% ---
-
-% Isto é um exemplo de Ficha Catalográfica, ou ``Dados internacionais de
-% catalogação-na-publicação''. Você pode utilizar este modelo como referência. 
-% Porém, provavelmente a biblioteca da sua universidade lhe fornecerá um PDF
-% com a ficha catalográfica definitiva após a defesa do trabalho. Quando estiver
-% com o documento, salve-o como PDF no diretório do seu projeto e substitua todo
-% o conteúdo de implementação deste arquivo pelo comando abaixo:
-%
-% \begin{fichacatalografica}
-%     \includepdf{fig_ficha_catalografica.pdf}
-% \end{fichacatalografica}
-
-
-A FICHA CATALOGRÁFICA só pode ser confeccionada por um bibliotecário.
-Para confecção, enviar por e-mail (bibliotecasjp@sistemafiep.org.br),
-as seguintes informações: Nome completo do(a) autor(a) do trabalho sem abreviações,
-nome completo do(a) orientador(a) do trabalho sem abreviações,
-resumo em português com as palavras-chave, título e subtítulo,
-quantidade prevista de páginas e a informação se há ilustrações.
-Impressa no verso da folha de rosto.
-
-\begin{fichacatalografica}
-	\sffamily
-	\vspace*{\fill}					% Posição vertical
-	\begin{center}					% Minipage Centralizado
-	\fbox{\begin{minipage}[c][8cm]{13.5cm}		% Largura
-	\small
-	
-	\hspace{0.5cm} \imprimirtitulo  / \imprimirautor. --
-	\imprimirlocal, \imprimirdata-
-	
-	\hspace{0.5cm} \thelastpage p. : il. (algumas color.) ; 30 cm.\\
-	
-	\hspace{0.5cm} \imprimirorientadorRotulo~\imprimirorientador\\
-	
-	\hspace{0.5cm}
-	\parbox[t]{\textwidth}{\imprimirtipotrabalho~--~\imprimirinstituicao,
-	\imprimirdata.}\\
-	
-	\hspace{0.5cm}
-		1. Palavra-chave1.
-		2. Palavra-chave2.
-		2. Palavra-chave3.
-		I. Orientador.
-		II. Universidade xxx.
-		III. Faculdade de xxx.
-		IV. Título 			
-	\end{minipage}}
-	\end{center}
-\end{fichacatalografica}
-% ---
-
-% ---
-% Inserir folha de aprovação
-% ---
-
-% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
-% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
-% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
-% imagem da página assinada pela banca com o comando abaixo:
-%
-% \begin{folhadeaprovacao}
-% \includepdf{folhadeaprovacao_final.pdf}
-% \end{folhadeaprovacao}
-%
-\begin{folhadeaprovacao}
-
-  \begin{center}
-
-		\begin{center}
-    	\MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirautor}
-		\end{center}
-
-    \vspace*{\fill}\vspace*{\fill}
-    \begin{center}
-      \MakeUppercase{\ABNTEXchapterfont\normalfont\bfseries\imprimirtitulo}
-    \end{center}
-    \vspace*{\fill}
-    
-    \hspace{.45\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \imprimirpreambulo
-    \end{minipage}%
-    \vspace*{\fill}
-   \end{center}
-        
-   Trabalho aprovado. \imprimirlocal, 07 de julho de 2021:
-
-   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
-   \assinatura{\textbf{Professor} \\ Convidado 1}
-   \assinatura{\textbf{Professor} \\ Convidado 2}
-   %\assinatura{\textbf{Professor} \\ Convidado 3}
-   %\assinatura{\textbf{Professor} \\ Convidado 4}
-      
-   \begin{center}
-    \vspace*{0.5cm}
-    \MakeUppercase{\normalfont\bfseries\imprimirlocal}
-    \par
-    {\normalfont\bfseries\imprimirdata}
-    \vspace*{1cm}
-  \end{center}
-  
-\end{folhadeaprovacao}
-% ---
-
-% ---
-% Dedicatória
-% ---
-\begin{dedicatoria}
-   \vspace*{\fill}
-   \centering
-   \noindent
-   \textit{Espaço destinado à dedicatória.
-	 A palavra DEDICATÓRIA não aparece escrita na folha.
-	 A dedicatória é um elemento opcional, segundo a ABNT NBR 14724 geralmente dedicado a parentes ou entes queridos. Deve-se evitar dedicatória muito extensa. Geralmente este item deve ocupar a metade de uma página. 
-	 Dedicatória é uma homenagem às pessoas afetivamente relevantes ao autor.
-	 .} \vspace*{\fill}
-\end{dedicatoria}
-% ---
-
-% ---
-% Agradecimentos
-% ---
-\begin{agradecimentos}
-
-Elemento opcional. Texto onde o autor faz seus agradecimentos às pessoas
-e/ou Instituições que colaboraram de maneira significativa à elaboração do trabalho. 
-Deve aparecer a palavra AGRADECIMENTOS no topo da folha de forma
-centralizada (sem indicativo numérico), na primeira linha da página,
-escrito em com Fonte em tamanho da usada no texto,
-caixa alta negritadas, separada por uma linha em branco do texto.
-
-\end{agradecimentos}
-% ---
-
-% ---
-% Epígrafe
-% ---
-\begin{epigrafe}
-A palavra EPÍGRAFE não vem escrita na folha.
-Epígrafe é a citação, opcional, de uma frase ou texto de pequena extensão e que, devido ao
-seu especial significado, o autor decidiu incorporar ao
-seu trabalho. Normalizada pela ABNT NBR 14724, é uma citação,
-seguida de indicação de autoria, relacionada com a matéria tratada no corpo do trabalho.
-Esta citação é elaborada conforme a ABNT NBR 10520. 	
-
-
-
-    \vspace*{\fill}
-	\begin{flushright}
-		\textit{``Não vos amoldeis às estruturas deste mundo, \\
-		mas transformai-vos pela renovação da mente, \\
-		a fim de distinguir qual é a vontade de Deus: \\
-		o que é bom, o que Lhe é agradável, o que é perfeito.\\
-		(Bíblia Sagrada, Romanos 12, 2)}
-	\end{flushright}
-\end{epigrafe}
-% ---
-
-% ---
-% RESUMOS
-% ---
-
-% resumo em português
-\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
-\begin{resumo}
- Segundo a \citeonline[3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
- objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
- destes itens dependem do tipo de resumo (informativo ou indicativo) e do
- tratamento que cada item recebe no documento original. O resumo deve ser
- precedido da referência do documento, com exceção do resumo inserido no
- próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
- resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
- ponto e finalizadas também por ponto.
-
- \textbf{Palavras-chave}: latex. abntex. editoração de texto.
-\end{resumo}
-
-% resumo em inglês
-\begin{resumo}[Abstract]
- \begin{otherlanguage*}{english}
-   This is the english abstract.
-
-   \vspace{\onelineskip}
- 
-   \noindent 
-   \textbf{Keywords}: latex. abntex. text editoration.
- \end{otherlanguage*}
-\end{resumo}
-
-% ---
-% inserir lista de ilustrações
-% ---
-\pdfbookmark[0]{\listfigurename}{lof}
-\listoffigures*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de quadros
-% ---
-\pdfbookmark[0]{\listofquadrosname}{loq}
-\listofquadros*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de tabelas
-% ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
-% ---
-
-% ---
-% inserir lista de abreviaturas e siglas
-% ---
-\begin{siglas}
-  \item[ABNT] Associação Brasileira de Normas Técnicas
-  \item[abnTeX] ABsurdas Normas para TeX
-  \item[IEL] Instituto Euvaldo Lodi
-  \item[FIEP] Federação das Indústrias do Estado do Paraná
-  \item[] 
-\end{siglas}
-% ---
-
-% ---
-% inserir lista de símbolos
-% ---
-\begin{simbolos}
-  \item[$ \Gamma $] Letra grega Gama
-  \item[$ \Lambda $] Lambda
-  \item[$ \zeta $] Letra grega minúscula zeta
-  \item[$ \in $] Pertence
-\end{simbolos}
-% ---
-
-% ---
-% inserir o sumario
-% ---
-\pdfbookmark[0]{\contentsname}{toc}
-\tableofcontents*
-\cleardoublepage
-% ---
-
+\include{prétextuais/alteraveis/fichacatalografica.tex}
+\include{prétextuais/alteraveis/aprovacao.tex}
+\include{prétextuais/alteraveis/dedicatoria.tex}
+\include{prétextuais/alteraveis/agradecimentos.tex}
+\include{prétextuais/alteraveis/epigrafe.tex}
+\include{prétextuais/alteraveis/resumo.tex}
+\include{prétextuais/inalteraveis/figuras.tex}
+\include{prétextuais/inalteraveis/quadros.tex}
+\include{prétextuais/inalteraveis/tabelas.tex}
+\include{prétextuais/alteraveis/siglas.tex}
+\include{prétextuais/alteraveis/simbolos.tex}
+\include{prétextuais/inalteraveis/sumario.tex}
 
 
 % ----------------------------------------------------------
@@ -525,13 +179,6 @@ Conteúdo da subsubseção.
 
 \lipsum[21-22]
 
-% ----------------------------------------------------------
-% Finaliza a parte no bookmark do PDF
-% para que se inicie o bookmark na raiz
-% e adiciona espaço de parte no Sumário
-% ----------------------------------------------------------
-%\phantompart
-
 \chapter{Conclusão}
 
 \lipsum[31-33]
@@ -551,66 +198,11 @@ Conteúdo da subsubseção.
 % ----------------------------------------------------------
 % Glossário
 % ----------------------------------------------------------
-
-% ----------------------------------------------------------
-% Apêndices
-% ----------------------------------------------------------
-
-% ---
-% Inicia os apêndices
-% ---
-\begin{apendicesenv}
-\partapendices
-
-% ----------------------------------------------------------
-\chapter{Contrato}
-% ----------------------------------------------------------
-
-\lipsum[50]
-
-% ----------------------------------------------------------
-\chapter{Imagem}
-% ----------------------------------------------------------
-\lipsum[55-57]
-
-\end{apendicesenv}
-% ---
-
-
-% ----------------------------------------------------------
-% Anexos
-% ----------------------------------------------------------
-
-% ---
-% Inicia os anexos
-% ---
-\begin{anexosenv}
-
-\partanexos
-
-% ---
-\chapter{Contrato}
-% ---
-\lipsum[30]
-
-% ---
-\chapter{Imagem}
-% ---
-
-\lipsum[31]
-
-% ---
-\chapter{Fusce facilisis lacinia dui}
-% ---
-
-\lipsum[32]
-
-\end{anexosenv}
-
-% 
+\include{póstextuais/alteraveis/apendices.tex}
+\include{póstextuais/alteraveis/anexos.tex}
 
 %---------------------------------------------------------------------
-% INDICE REMISSIVO
+% ÍNDICE REMISSIVO
 %---------------------------------------------------------------------
 \phantompart
 \index{Exemplo de Índice}
